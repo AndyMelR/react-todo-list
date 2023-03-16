@@ -45,7 +45,7 @@ const Home = () => {
               </li>
             ))}
             <li id="task-counter">
-              <div>{todos.length} tasks</div>
+              <div>{todos.length} tasks left</div>
             </li>
           </ul>
         </div>

@@ -53,7 +53,7 @@ ul {
 }
 
 ul li {
-    font-size: 1rem;
+    font-size: 1.5rem;
     width: 100%;
     text-align: center;
     border-bottom: 1px solid lightgray;
@@ -77,7 +77,7 @@ input {
     width: 41%;
     margin-right: auto;
     border: none;
-    font-size: 1rem;
+    font-size: 0.7rem;
     color: rgb(153, 150, 150);
 }
 

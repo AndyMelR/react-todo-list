@@ -15,40 +15,39 @@ const Home = () => {
       <div className="container">
         <h1>todos</h1>
         <div className="container sombra" id="notebook">
-        <ul>
-          <li>
-            <input
-              type="text"
-              placeholder="Write here your new to-do"
-              onChange={(e) => setInputValue(e.target.value)}
-              value={inputValue}
-              onKeyUp={(e) => {
-                if (e.key === "Enter") {
-                  setTodos(todos.concat([inputValue]));
-                  setInputValue("");
-                }
-              }}
-            ></input>
-          </li>
-          
-          {todos.map((todo, index) => (
-            <li key={index}>
-              <span>{todo}</span>
-              <FontAwesomeIcon
-                icon={faXmark}
-                onClick={() =>
-                  setTodos(
-                    todos.filter((t, currentIndex) => index != currentIndex)
-                  )
-                }
-              />
+          <ul>
+            <li>
+              <input
+                type="text"
+                placeholder="Write here your new to-do"
+                onChange={(e) => setInputValue(e.target.value)}
+                value={inputValue}
+                onKeyUp={(e) => {
+                  if (e.key === "Enter") {
+                    setTodos(todos.concat([inputValue]));
+                    setInputValue("");
+                  }
+                }}
+              ></input>
             </li>
-          ))}
-          <li id="task-counter">
-            <div>{todos.length} tasks</div>
-          </li>
 
-        </ul>
+            {todos.map((todo, index) => (
+              <li key={index}>
+                <span>{todo}</span>
+                <FontAwesomeIcon
+                  icon={faXmark}
+                  onClick={() =>
+                    setTodos(
+                      todos.filter((t, currentIndex) => index != currentIndex)
+                    )
+                  }
+                />
+              </li>
+            ))}
+            <li id="task-counter">
+              <div>{todos.length} tasks</div>
+            </li>
+          </ul>
         </div>
       </div>
     </>
